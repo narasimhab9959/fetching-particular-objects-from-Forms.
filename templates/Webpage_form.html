@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td><label for="tn">Topic_name</label></td>
+                    <td><select name="tn" id="tn">
+                        {% for to in LTO %}
+                            <option value="{{to}}">{{to.topic_name}}</option>
+                        {% endfor %}
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="na">Name</label></td>
+                    <td><input type="text" name="na" id="na"></td>
+                </tr>
+                <tr>
+                    <td><label for="ur">Url</label></td>
+                    <td><input type="url" name="ur" id="ur"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit"></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

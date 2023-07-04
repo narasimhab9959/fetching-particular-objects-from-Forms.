@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retrieve Webpage</title>
+</head>
+<body>
+    <center>
+        <table border="3px">
+            <tr>
+                <th>Topic_name</th>
+                <th>name</th>
+                <th>url</th>
+            </tr>
+            {% for do in RWOS %}
+                <tr>
+                    <td>{{do.topic_name}}</td>
+                
+                    <td>{{do.name}}</td>
+                
+                    <td>{{do.url}}</td>
+                </tr>
+             {% endfor %}   
+        </table>
+    </center>
+</body>
+</html>
